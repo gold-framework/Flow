@@ -10,7 +10,7 @@ parse = parser.parser
 
 def get_file():
     argparser = argparse.ArgumentParser()
-    argparser.add_argument("--file", "-f", default=os.path.getdir(__file__) + "/test.flo", nargs=1)
+    argparser.add_argument("--file", "-f", default=os.path.getdir(__file__) + "/" + os.path.join("samples", "test.flo"), nargs=1)
 
     args = argparser.parse_args()
     return args.file
