@@ -1,8 +1,8 @@
 import argparse
-
+import os
 import eval
-import lexer
-from Flow import parser
+import src.lexer
+from Flow.src import parser
 
 lex = lexer.lexer
 parse = parser.parser
@@ -10,7 +10,7 @@ parse = parser.parser
 
 def get_file():
     argparser = argparse.ArgumentParser()
-    argparser.add_argument("--file", "-f", default="test.flo", nargs=1)
+    argparser.add_argument("--file", "-f", default=os.path.getdir(__file__) + "/test.flo", nargs=1)
 
     args = argparser.parse_args()
     return args.file
