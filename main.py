@@ -1,6 +1,6 @@
 import argparse
 import os
-import eval
+import src.eval
 import src.lexer
 from Flow.src import parser
 
