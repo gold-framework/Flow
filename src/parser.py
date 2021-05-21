@@ -1,6 +1,6 @@
 from rply import ParserGenerator
-from Flow.error import *
-from ast import *
+from Flow.src.error import *
+from Flow.src.ast import *
 
 pg = ParserGenerator(
     # A list of all token names, accepted by the parser.

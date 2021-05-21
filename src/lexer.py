@@ -1,5 +1,5 @@
 from rply import LexerGenerator
-from tokens import TOKENS
+from .tokens import TOKENS
 
 lg = LexerGenerator()
 
