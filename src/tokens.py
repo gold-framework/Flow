@@ -7,5 +7,7 @@ TOKENS = [
     'OPEN_PARENS',
     'CLOSE_PARENS',
     'LSHIFT',
-    'RSHIFT'
+    'RSHIFT',
+    'GT',
+    'LT'
 ]

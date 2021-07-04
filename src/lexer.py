@@ -10,8 +10,11 @@ lg.add(TOKENS[3], r'\*')
 lg.add(TOKENS[4], r'/')
 lg.add(TOKENS[5], r'\(')
 lg.add(TOKENS[6], r'\)')
-lg.add(TOKENS[7], r'<<')
-lg.add(TOKENS[8], r'>>')
+lg.add(TOKENS[7], r'lbs')
+lg.add(TOKENS[8], r'rbs')
+lg.add(TOKENS[9], r'>')
+lg.add(TOKENS[10], r'<')
+
 
 lg.ignore('\s+')
 

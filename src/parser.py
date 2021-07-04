@@ -1,6 +1,6 @@
 from rply import ParserGenerator
-from Flow.src.error import *
-from Flow.src.ast import *
+from Gold.Flow.src.error import *
+from Gold.Flow.src.ast import *
 
 pg = ParserGenerator(
     # A list of all token names, accepted by the parser.
@@ -49,13 +49,17 @@ def expression_binop(p):
         return Rshift(left, right)
     elif p[1].gettokentype() == 'LSHIFT':
         return Lshift(left, right)
+    elif p[1].gettokentype() == 'GT':
+        return Greater(left, right)
+    elif p[1].gettokentype() == 'LT':
+        return Less(left, right)
     else:
         raise AssertionError('Oops, this should not be possible!')
 
 
 @pg.error
 def error_handler(token):
-    raise Error("Randomly ran into a %s token at col %a line %a" % (token.gettokentype().lower(),  token.getsourcepos().colno,
+    raise TokenError("Randomly ran into a %s token at col %a line %a" % (token.gettokentype().lower(),  token.getsourcepos().colno,
                                                    token.getsourcepos().lineno))
 
 

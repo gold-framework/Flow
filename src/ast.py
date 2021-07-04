@@ -43,3 +43,13 @@ class Lshift(BinaryOp):
 class Rshift(BinaryOp):
     def eval(self):
         return self.left.eval() >> self.right.eval()
+
+
+class Greater(BinaryOp):
+    def eval(self):
+        return self.left.eval() < self.right.eval()
+
+
+class Less(BinaryOp):
+    def eval(self):
+        return self.left.eval() > self.right.eval()
